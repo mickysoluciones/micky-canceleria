@@ -343,7 +343,7 @@ export default function MickyCanceleriaJapandi() {
 
             <textarea
               name="mensaje"
-              rows="6"
+              rows={6}
               required
               placeholder="Cuéntanos sobre tu proyecto..."
               className="w-full border border-[#d8cfc2] rounded-2xl px-5 py-4 bg-[#fdfbf8] mb-8"
