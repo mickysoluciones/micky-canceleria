@@ -12,6 +12,12 @@ export default function MickyCanceleriaJapandi() {
     '/galeria4.jpg',
     '/galeria5.jpg',
     '/galeria6.jpg',
+    '/galeria7.jpg',
+    '/galeria8.jpg',
+    '/galeria9.jpg',
+    '/galeria10.jpg',
+    '/galeria11.jpg',
+    '/galeria12.jpg',
   ]
 
   return (
@@ -192,7 +198,7 @@ export default function MickyCanceleriaJapandi() {
               <img
                 src="/image1.png"
                 alt="Puertas y ventanas"
-                className="rounded-[24px] mb-6 w-full h-[320px] object-cover"
+                className="rounded-[24px] mb-6 w-full h-[280px] object-cover"
               />
 
               <span className="text-sm uppercase tracking-[0.2em] text-[#8d8174]">
@@ -213,7 +219,7 @@ export default function MickyCanceleriaJapandi() {
               <img
                 src="/image2.png"
                 alt="Diseños personalizados"
-                className="rounded-[24px] mb-6 w-full h-[320px] object-cover"
+                className="rounded-[24px] mb-6 w-full h-[280px] object-cover"
               />
 
               <span className="text-sm uppercase tracking-[0.2em] text-[#8d8174]">
@@ -234,7 +240,7 @@ export default function MickyCanceleriaJapandi() {
               <img
                 src="/image3.png"
                 alt="Canceles modernos"
-                className="rounded-[24px] mb-6 w-full h-[320px] object-cover"
+                className="rounded-[24px] mb-6 w-full h-[280px] object-cover"
               />
 
               <span className="text-sm uppercase tracking-[0.2em] text-[#8d8174]">
@@ -257,7 +263,7 @@ export default function MickyCanceleriaJapandi() {
       <section id="galeria" className="py-24 bg-[#efe7dc]">
         <div className="max-w-7xl mx-auto px-6">
 
-          <div className="text-center mb-20">
+          <div className="text-center mb-16">
             <span className="uppercase tracking-[0.3em] text-[#8d8174] text-sm">
               Galería
             </span>
@@ -271,16 +277,17 @@ export default function MickyCanceleriaJapandi() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* NUEVA GALERIA MAS PEQUEÑA */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {gallery.map((image, index) => (
               <div
                 key={index}
-                className="overflow-hidden rounded-[28px] bg-white shadow-sm hover:shadow-2xl transition duration-500"
+                className="overflow-hidden rounded-[24px] bg-white shadow-sm hover:shadow-2xl transition duration-500"
               >
                 <img
                   src={image}
                   alt={`Proyecto ${index + 1}`}
-                  className="w-full h-[420px] object-cover hover:scale-105 transition duration-700"
+                  className="w-full h-[220px] md:h-[260px] object-cover hover:scale-110 transition duration-700"
                 />
               </div>
             ))}
@@ -359,42 +366,75 @@ export default function MickyCanceleriaJapandi() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="py-10 border-t border-[#d8cfc2] bg-[#f6f1ea]">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      {/* FOOTER NUEVO */}
+<footer className="bg-[#2f2a24] text-white">
+  <div className="max-w-7xl mx-auto px-6 py-16">
 
-          <div className="flex items-center gap-4">
-            <img
-              src="/logo.png"
-              alt="Micky Cancelería"
-              className="h-14 w-auto object-contain"
-            />
-          </div>
+    <div className="grid md:grid-cols-3 gap-12">
 
-          <div className="flex gap-8 uppercase text-sm tracking-[0.2em] text-[#7a6f63]">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">WhatsApp</a>
-          </div>
+      {/* LOGO */}
+      <div>
+        <img
+          src="/logo.png"
+          alt="Micky Cancelería"
+          className="h-16 w-auto mb-5"
+        />
+
+        <p className="text-white/70 leading-relaxed">
+          Especialistas en cancelería de aluminio,
+          ventanas, puertas y soluciones modernas
+          para transformar tus espacios.
+        </p>
+      </div>
+
+      {/* CONTACTO */}
+      <div>
+        <h4 className="uppercase tracking-[0.2em] text-sm mb-5 text-[#c7b19a]">
+          Contacto
+        </h4>
+
+        <div className="space-y-3 text-white/80">
+          <p>📞 55 1440 3045</p>
+          <p>✉️ solucionescailc@gmail.com</p>
+          <p>📍 Ciudad de México</p>
         </div>
-      </footer>
+      </div>
+
+      {/* REDES */}
+      <div>
+        <h4 className="uppercase tracking-[0.2em] text-sm mb-5 text-[#c7b19a]">
+          Síguenos
+        </h4>
+
+        <div className="flex flex-col gap-3 text-white/80">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          
+        </div>
+      </div>
+
+    </div>
+
+    <div className="border-t border-white/10 mt-12 pt-8 text-center text-white/50 text-sm">
+      © {new Date().getFullYear()} Micky Cancelería. Todos los derechos reservados.
+    </div>
+
+  </div>
+</footer>
 
       {/* WHATSAPP FLOTANTE */}
-      <a
-        href="https://wa.me/525514403045"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-[#25D366] w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition duration-300"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 32 32"
-          fill="white"
-          className="w-8 h-8"
-        >
-          <path d="M16 .396C7.164.396 0 7.56 0 16.396c0 2.82.735 5.575 2.132 8.003L0 32l7.84-2.058a15.93 15.93 0 0 0 8.16 2.238c8.836 0 16-7.164 16-16S24.836.396 16 .396z"/>
-        </svg>
-      </a>
+<a
+  href="https://wa.me/525514403045"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-6 right-6 z-50 hover:scale-110 transition duration-300"
+>
+  <img
+    src="/whatsapp-color-svgrepo-com.svg"
+    alt="WhatsApp"
+    className="w-16 h-16 drop-shadow-2xl"
+  />
+</a>
 
       {/* ANIMACIONES */}
       <style jsx>{`
