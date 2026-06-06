@@ -77,13 +77,13 @@ export default function MickyCanceleriaJapandi() {
         )}
       </header>
 
-      {/* HERO SECTION - REORDENADA Y AJUSTADA EN TIPOGRAFÍA */}
+      {/* HERO SECTION - ESTRUCTURA UNIFICADA DE ALINEACIÓN */}
       <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 bg-[#fcfaf7]">
         <div className="max-w-7xl mx-auto px-6">
-          {/* Flexcol en móvil para ordenar rigurosamente: Texto -> Imagen -> Botón */}
+          {/* Flexcol en móvil para ordenar Texto -> Imagen -> Botón. Grid en Desktop. */}
           <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
 
-            {/* BLOQUE DE TEXTO (PRIMERO EN MÓVIL Y ESCRITORIO) */}
+            {/* COLUMNA IZQUIERDA: TEXTO Y BOTÓN INTEGRADOS (PRIMERO EN MÓVIL Y DESKTOP) */}
             <div className="order-1 lg:col-span-5 flex flex-col justify-center">
               {/* Subtítulo: Agrandado para mejorar legibilidad */}
               <span className="uppercase tracking-[0.25em] text-sm md:text-base font-semibold text-[#8a7a68] mb-4 block">
@@ -95,9 +95,20 @@ export default function MickyCanceleriaJapandi() {
                 luz y <br />
                 <span className="font-normal italic text-[#51473c]">perfección.</span>
               </h1>
-              <p className="text-[#61574c] text-sm md:text-base leading-relaxed max-w-sm mb-6 lg:mb-12 opacity-90">
-                Sistemas de aluminio y cristal templado. Acabados de lujo diseñados para integrarse tu a proyecto.
+              <p className="text-[#61574c] text-sm md:text-base leading-relaxed max-w-sm mb-6 lg:mb-8 opacity-90">
+                Sistemas de aluminio y cristal templado. Acabados de lujo diseñados para integrarse a tu proyecto.
               </p>
+
+              {/* Botón en Desktop: Fluye naturalmente dentro del contenedor izquierdo haciendo que el slider se alinee a él */}
+              <div className="hidden lg:flex flex-col sm:flex-row gap-4 mt-2">
+                <a
+                  href="#galeria"
+                  onClick={(e) => scrollToSection(e, 'galeria')}
+                  className="bg-[#2f2a24] text-white text-[10px] uppercase tracking-[0.3em] font-bold px-10 py-4.5 rounded-lg hover:bg-black transition-all duration-400 text-center shadow-sm min-w-[180px] w-full sm:w-auto"
+                >
+                  Proyectos
+                </a>
+              </div>
             </div>
 
             {/* SLIDER DE IMÁGENES (SEGUNDO EN MÓVIL) */}
@@ -114,8 +125,8 @@ export default function MickyCanceleriaJapandi() {
               <div className="absolute inset-0 bg-black/[0.04] pointer-events-none" />
             </div>
 
-            {/* BOTÓN DE ACCIÓN (TERCERO EN MÓVIL, SE ADAPTA AL FLUJO EN DESKTOP) */}
-            <div className="order-3 lg:col-span-5 flex flex-col sm:flex-row gap-4 mt-2 lg:mt-[-20px]">
+            {/* BOTÓN DE ACCIÓN EN MÓVIL (TERCERO EN MÓVIL) */}
+            <div className="order-3 lg:hidden flex flex-col sm:flex-row gap-4 mt-2">
               <a
                 href="#galeria"
                 onClick={(e) => scrollToSection(e, 'galeria')}
@@ -299,6 +310,7 @@ export default function MickyCanceleriaJapandi() {
         </div>
       </a>
 
+      {/* ESTILOS INTERNOS */}
       <style jsx>{`
         .animate-fade { animation: fade1 18s infinite; }
         .animate-fade2 { animation: fade2 18s infinite; }
