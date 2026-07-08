@@ -278,7 +278,7 @@ export default function MickyCanceleriaJapandi() {
             </div>
             <div>
               <h4 className="uppercase tracking-[0.2em] text-xs font-bold mb-6 text-[#cfa881]">Información</h4>
-              <p className="text-sm text-[#b5ab9d]">📞 55 1440 3045<br />✉️ solucionescailc@gmail.com<br />📍 Ciudad de México</p>
+              <p className="text-sm text-[#b5ab9d]">📞 55 1440 3045<br />✉️ ventas@mickycanceleria.com<br />📍 Cancún<br />📍 Ciudad de México</p>
             </div>
             <div>
               <h4 className="uppercase tracking-[0.2em] text-xs font-bold mb-6 text-[#cfa881]">Enlaces</h4>
